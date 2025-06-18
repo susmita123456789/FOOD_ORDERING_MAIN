@@ -31,7 +31,7 @@ const Footer = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    ADITYARAJ SINGH
+                    SUSMITA SINGH
                   </a>
                 </span>
               </h1>
@@ -42,7 +42,7 @@ const Footer = () => {
 
               <div className="flex justify-center lg:justify-start mt-3 -mx-2 text-white text-2xl">
                 <a
-                  href="https://www.linkedin.com/in/adityaaraj/"
+                  href="https://www.linkedin.com/in/susmita-singh-040299253/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                   className="mx-2 hover:text-gray-400"
                   aria-label="LinkedIn"
                   target="_blank"
@@ -52,7 +52,7 @@ const Footer = () => {
                 </a>
 
                 <a
-                  href="https://github.com/Adityaraj-Singhh"
+                  href="https://github.com/susmita123456789"
                   className="mx-2 hover:text-gray-400"
                   aria-label="Github"
                   target="_blank"
@@ -62,7 +62,7 @@ const Footer = () => {
                 </a>
 
                 <a
-                  href="https://codolio.com/profile/adityaraj_singh"
+                  href="https://codolio.com/profile/susmita_singh"
                   className="mx-2 hover:text-gray-400"
                   aria-label="DEV"
                   target="_blank"
@@ -133,7 +133,7 @@ const Footer = () => {
                   +91-9903605588
                 </span>
                 <span className="block mt-2 text-sm hover:text-white">
-                  careers.adityaraj@gmail.com
+                  susmita2022@gmail.com
                 </span>
               </div>
             </div>
@@ -152,7 +152,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                Adityaraj Singh
+                SUSMITA Singh
               </a>
             </span>
           </p>

@@ -240,7 +240,7 @@ const ResMenu = () => {
           </button>
         </div>
         <p className="text-sm text-gray-600 text-center pb-10 pt-4">
-          All rights reserved | Adityraj Singh
+          All rights reserved | Susmita Singh
         </p>
       </div>
 
