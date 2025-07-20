@@ -66,20 +66,45 @@ const ApiKey = '7dfcfb736685c8b7';
 const EDUCORS_URL = 'https://educorssolver.host/api/getData';
 const Target = 'https://www.swiggy.com/dapi/restaurants/list/v5?lat=31.00480&lng=75.94630&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING';
 
-const fetchData = async () => {
+// const fetchData = async () => {
     
+//     const data = await fetch(
+//         `${EDUCORS_URL}?ApiKey=${ApiKey}&Target=${encodeURIComponent(Target)}`
+//     );
+//     const json = await data.json();
+
+//     console.log(json);
+
+//     // console.log(json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants);
+
+//     setRestaurantsList(json?.data?.cards[2].card?.card?.gridElements?.infoWithStyle?.restaurants);
+//     setSearchedRestaurents(json?.data?.cards[2].card?.card?.gridElements?.infoWithStyle?.restaurants);
+// }
+
+
+
+const fetchData = async () => {
+  try {
     const data = await fetch(
-        `${EDUCORS_URL}?ApiKey=${ApiKey}&Target=${encodeURIComponent(Target)}`
+      `${EDUCORS_URL}?ApiKey=${ApiKey}&Target=${encodeURIComponent(Target)}`
     );
     const json = await data.json();
-
     console.log(json);
 
-    // console.log(json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants);
+    const restaurants =
+      json?.data?.cards?.[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
 
-    setRestaurantsList(json?.data?.cards[2].card?.card?.gridElements?.infoWithStyle?.restaurants);
-    setSearchedRestaurents(json?.data?.cards[2].card?.card?.gridElements?.infoWithStyle?.restaurants);
-}
+    setRestaurantsList(restaurants);
+    setSearchedRestaurents(restaurants);
+  } catch (err) {
+    console.error("Error fetching data:", err);
+    setRestaurantsList([]); // fallback
+    setSearchedRestaurents([]); // fallback
+  }
+};
+
+
+
 
 useEffect(()=>{
   fetchData();
